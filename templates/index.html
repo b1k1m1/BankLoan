@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>Bank Loan Application</title>
+ </head>
+ <body>
+    <div class="loan">
+	<form action="{{url_for('predict')}}" method="POST">
+		<label for="firstname">First Name</label> 
+		<input type="text" id="firstname" name="firstname"> 
+		<br><br>
+		<label for="lastname">Last Name</label> 
+		<input type="text" id="lastname" name="lastname"> 
+		<br><br>
+		<label for="Dependents">Dependents</label> 
+		<select id="Dependents" name="Dependents"> 
+			<option value=1>One</option> 
+			<option value=2>Two</option> 
+			<option value=3>Three</option> 
+			<option value=4>Four</option> 
+			<option value=5>Five</option> 
+		</select> 
+		<br><br>
+		<label for="ApplicantIncome">Applicant Income</label> 
+		<input type="number" id="ApplicantIncome" name="ApplicantIncome">
+		<br><br>
+		<label for="CoapplicantIncome">Co applicant Income</label> 
+		<input type="number" id="CoapplicantIncome" name="CoapplicantIncome">
+		<br><br>
+		<label for="LoanAmount">Loan Amount</label> 
+		<input type="number" id="LoanAmount" name="LoanAmount">
+		<br><br>
+		<label for="Loan_Amount_Term">Loan Amount Term</label> 
+		<input type="number" id="Loan_Amount_Term" name="Loan_Amount_Term">
+		<br><br>
+		<label for="Credit_History">Credit History</label>
+		<select id="Credit_History" name="Credit_History"> 
+			<option value=0>0</option> 
+			<option value=1>1</option> 
+			<option value=2>2</option> 
+			<option value=3>3</option> 
+		</select> 
+		<br><br>
+		<label for="Gender">Gender</label> 		
+		<select id="Gender" name="Gender"> 
+			<option value="1">Male</option> 
+			<option value="0">Female</option> 
+		</select>
+		<br><br>
+		<label for="Married">Married</label> 
+		<select id="Married" name="Married"> 
+			<option value="1">Yes</option> 
+			<option value="0">No</option> 
+		</select>
+		<br><br>
+		<label for="Education">Education</label> 
+		<select id="Education" name="Education"> 
+			<option value="1">Graduate</option> 
+			<option value="0">Not Graduate</option> 
+		</select>
+		<br><br>
+		<label for="Self_Employed">Self Employed</label> 
+		<select id="Self_Employed" name="Self_Employed"> 
+			<option value="1">Yes</option> 
+			<option value="0">No</option> 
+		</select>
+		<br><br>
+		<label for="Property_Area">Property Area</label> 
+		<select id="Property_Area" name="Property_Area"> 
+			<option value="1">Rural</option> 
+			<option value="2">Semiurban</option> 
+			<option value="3">Urban</option>
+		</select>
+		<br><br>
+		
+		<input type="submit" value="Predict">
+	</form>
+	<br>
+	<br>
+	{{prediction_text}}
+	</div>
+ </body>
+</html>
